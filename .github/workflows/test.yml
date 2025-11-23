@@ -63,5 +63,6 @@ jobs:
 
       - name: Test installation
         run: |
+          uv venv
           uv pip install dist/*.whl
-          python -c "import n7m; print(n7m.__version__)"
+          uv run python -c "import n7m; print(n7m.__version__)"
